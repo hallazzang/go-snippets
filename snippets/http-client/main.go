@@ -10,12 +10,14 @@ import (
 )
 
 func GetWithDefaultHTTPClient() {
+	// Most of the time, it is not recommended using the default HTTP client.
+	// But for small examples like this one, it is acceptable.
 	resp, err := http.Get("https://httpbin.org/get")
 	if err != nil {
 		panic(err)
 	}
 	defer resp.Body.Close() // Don't forget to close resp.Body!
-	// Also, if you have to read the body to the end of its stream
+	// Also, you have to read the body to the end of its stream
 	// to get the resources correctly disposed.
 
 	// Read the response body as a byte slice.
