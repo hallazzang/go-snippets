@@ -6,4 +6,4 @@ Minimal Go code snippets.
 
 - [File Upload](./snippets/file-upload)
 - [HTTP Client](./snippets/http-client)
-
+- [Map](./snippets/map)
